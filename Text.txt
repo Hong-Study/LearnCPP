@@ -1,1 +1,9 @@
 This file is test file.
+
+and git 명령어
+
+git add -u 
+git commit -m ""
+git push
+
+Okay?
