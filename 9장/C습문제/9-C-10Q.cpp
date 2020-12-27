@@ -22,19 +22,19 @@ class Shape{
 
 class Circle : public Shape{
 	protected:
-	virtual void draw(){
+	void draw(){
 		cout << "Circle" << endl;
 	}
 };
 class Rect : public Shape{
 	protected:
-	virtual void draw(){
+	void draw(){
 		cout << "Rect" << endl;
 	}
 };
 class Line : public Shape{
 	protected:
-	virtual void draw(){
+	void draw(){
 		cout << "Line" << endl;
 	}
 };

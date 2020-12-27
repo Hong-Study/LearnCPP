@@ -29,15 +29,20 @@ int main(){
 		cout<<"정보 입력: 1, 퀴즈: 2, 종료: 3 >>";
 		cin>>n;
 		if(n==1){
-			cout<<"현재 "<<v.size()+1<<"개의 나라가 있습니다."<<endl;
+			cout<<"현재 "<<v.size()<<"개의 나라가 있습니다."<<endl;
 			cout<<"나라와 수도를 입력하세요(no no이면 입력 끝)"<<endl;
 			string a, b;
 			while(1){
+				bool Yes = true;
 				cout<<v.size()+1<<">>";
 				cin>>a>>b;
 				if(a == "no" && b == "no")				//중복 체크 아직 안만듬.
 					break;
-				else{
+				for(int i=0;i<v.size();i++){
+					if(a == v[i].re_nation())
+						Yes = false;
+				}
+				if(Yes){
 					v.push_back(Nation(a,b));
 				}
 			}
@@ -45,7 +50,7 @@ int main(){
 		else if(n==2){
 			srand((unsigned)time(NULL));
 			while(1){
-				int num = rand()%(v.size()+1);
+				int num = rand()%(v.size());
 				string answer;
 				cout<<v[num].re_nation()<<"의 수도는 ? ";
 				cin>>answer;
