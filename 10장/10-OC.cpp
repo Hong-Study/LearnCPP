@@ -1,4 +1,4 @@
-#include<iostream>
+#include<iostream>					//STL vector사용
 #include<vector>
 #include<ctime>
 #include<cstdlib>

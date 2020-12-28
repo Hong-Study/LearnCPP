@@ -3,7 +3,7 @@
 using namespace std;
 
 template <class type>
-type* concat(type a[], int sizea, type b[], int sizeb){
+type* concat(type a[], int sizea, type b[], int sizeb){			//제네릭 함수
 	type *p = new type[sizea + sizeb];
 	for(int i=0;i<sizea;i++){
 		p[i] = a[i];
